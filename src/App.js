@@ -1,9 +1,32 @@
 import './App.css';
-import { useRef, useEffect } from 'react'
+import { useRef, useState, useEffect } from 'react'
+
+const getWindowDimensions = () => {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+const useWindowDimensions = () => {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 
 const Canvas = props => {
-  
   const canvasRef = useRef(null)
+  const { width, height } = useWindowDimensions()
   const birthday = new Date(2003, 5, 10)
   const today = new Date()
   const milSecPerWeek = 7 * 24 * 3600000
@@ -11,7 +34,7 @@ const Canvas = props => {
   
   const draw = ctx => {
     ctx.fillStyle = '#f7613b'
-    ctx.strokeStyle = '#000000'
+    ctx.strokeStyle = '#ffffff'
     for (let year=0;year<100;year++){
       for (let week=0;week<52;week++){
         ctx.beginPath()
@@ -24,14 +47,13 @@ const Canvas = props => {
       }
     }
   }
-
   
   useEffect(() => {
     
     const canvas = canvasRef.current
     const context = canvas.getContext('2d')
     
-    canvas.height = window.innerHeight * 0.95
+    canvas.height = height * 0.95
     canvas.width = canvas.height * 0.55
     //Our draw come here
     draw(context)
