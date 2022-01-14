@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/LifeCal/static/css/main.267c9daf.css",
+    "main.css": "/LifeCal/static/css/main.9c3d13f7.css",
     "main.js": "/LifeCal/static/js/main.dd00669d.js",
     "static/js/787.18df401d.chunk.js": "/LifeCal/static/js/787.18df401d.chunk.js",
     "index.html": "/LifeCal/index.html",
-    "main.267c9daf.css.map": "/LifeCal/static/css/main.267c9daf.css.map",
+    "main.9c3d13f7.css.map": "/LifeCal/static/css/main.9c3d13f7.css.map",
     "main.dd00669d.js.map": "/LifeCal/static/js/main.dd00669d.js.map",
     "787.18df401d.chunk.js.map": "/LifeCal/static/js/787.18df401d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.267c9daf.css",
+    "static/css/main.9c3d13f7.css",
     "static/js/main.dd00669d.js"
   ]
 }
