@@ -35,10 +35,14 @@ const Canvas = props => {
   const draw = ctx => {
     ctx.fillStyle = '#f7613b'
     ctx.strokeStyle = '#ffffff'
+    let h = canvasRef.current.clientHeight
+    let offset = h*0.02
+    let hspace = h*0.01
+    let vspace = h*0.01
     for (let year=0;year<100;year++){
       for (let week=0;week<52;week++){
         ctx.beginPath()
-        ctx.arc(15+9*week, 14.6+8.6*year, 3, 0, 2*Math.PI)
+        ctx.arc(offset+vspace*week, offset+hspace*year, 3, 0, 2*Math.PI)
         if ( week+52*year < weekLived ) {
           ctx.fill()
         } else {
