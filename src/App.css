@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;600;900&display=swap');
 
 .main {
   height: 100vh;
@@ -6,15 +7,16 @@
 }
 
 .title {
-  height : 5vh;
+  height : 4vh;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%,0);
   font-size: 5vh;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  overflow: none;
+  font-family: 'Noto Serif Display', serif;
+  font-weight: 900;
+  color: black;
+  word-wrap: break-word
 }
 
 .canvas {
