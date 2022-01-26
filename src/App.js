@@ -27,6 +27,7 @@ const useWindowDimensions = () => {
 const Canvas = props => {
   const canvasRef = useRef(null)
   const { width, height } = useWindowDimensions()
+  const dpr = window.devicePixelRatio || 1;
   const birthday = new Date(2003, 5, 10)
   const today = new Date()
   const milSecPerWeek = 7 * 24 * 3600000
@@ -64,8 +65,9 @@ const Canvas = props => {
     const canvas = canvasRef.current
     const context = canvas.getContext('2d')
     
-    canvas.height = height * 0.95
+    canvas.height = height * 0.95 * 2
     canvas.width = canvas.height * 0.58
+
     //Our draw come here
     draw(context)
   }, [draw]) 
