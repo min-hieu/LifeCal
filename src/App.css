@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 .main {
   height: 100vh;
@@ -7,16 +7,17 @@
 }
 
 .title {
-  height : 4vh;
+  height: 4vh;
+  width: 55vh;
+  text-align: center;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%,0);
   font-size: 5vh;
-  font-family: 'Noto Serif Display', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 900;
   color: black;
-  word-wrap: break-word
 }
 
 .canvas {
